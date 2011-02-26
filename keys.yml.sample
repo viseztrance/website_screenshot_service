@@ -1,0 +1,6 @@
+development:
+  - somerandomtestkey
+test:
+  - somerandomtestkey
+production:
+  - somerandomtestkey
