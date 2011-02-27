@@ -19,7 +19,7 @@ get "/" do
   size = params[:size] || "1400x900"
   launcher = "website-screenshot"
   if Sinatra::Application.environment.to_s == "production"
-    launcher << 'xvfb-run --server-args="-screen 0, %sx24"' % size
+    launcher << ' xvfb-run --server-args="-screen 0, %sx24"' % size
   end
   `#{launcher} --url=#{params[:url]} --file=#{file_name} --size=#{size}`
   if File.exists?(file_name)
